@@ -1,5 +1,5 @@
 
-[![oliverbuddy's GitHub stats](https://github-readme-stats.vercel.app/api?username=olierbuddy)](https://github.com/anuraghazra/github-readme-stats)
+[![oliverbuddy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy)](https://github.com/anuraghazra/github-readme-stats)
 
 
 
