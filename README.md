@@ -1,15 +1,10 @@
 
-[![oliverbuddy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy&show_icons=true&count_private=true&border_color=COLOR10)](https://github.com/oliverbuddy)
+[![oliverbuddy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy&show_icons=true&count_private=true&border_color=COLOR10&hide_border=false)](https://github.com/oliverbuddy)
 
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oliverbuddy&layout=compact)](https://github.com/oliverbuddy)
 
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=oliverbuddy&repo=github-readme-stats" />
-</a>
-<a href="https://github.com/anuraghazra/convoychat">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=oliverbuddy&repo=convoychat" />
-</a>
+
 
 ### Hi there 👋
 
