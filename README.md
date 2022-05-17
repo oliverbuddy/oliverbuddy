@@ -6,7 +6,9 @@
 
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white) 
 ![Java](https://img.shields.io/badge/-Java-F9EAD9?style=flat-square&logo=java&logoColor=F12938) 
-![Dart](https://img.shields.io/badge/-Flutter-F9EAD9?style=flat-square&logo=java&logoColor=BLUE)
+![Dart](https://img.shields.io/badge/-Dart-F9EAD9?style=flat-square&logo=java&logoColor=BLUE) 
+![JavaScript](https://img.shields.io/badge/-JavaScript-F9EAD9?style=flat-square&logo=java&logoColor=BLUE) 
+![Kotlin](https://img.shields.io/badge/-Kotlin-F9EAD9?style=flat-square&logo=java&logoColor=BLUE)
 
 
 <!-- [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=oliverbuddy&repo=BaseLibrary)](https://github.com/anuraghazra/github-readme-stats) -->
