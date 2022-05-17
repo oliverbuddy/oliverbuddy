@@ -2,7 +2,7 @@
 [![oliverbuddy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy&show_icons=true&count_private=true&border_color=#b062b0)](https://github.com/oliverbuddy)
 
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oliverbuddy&layout=compact)](https://github.com/oliverbuddy)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oliverbuddy)](https://github.com/oliverbuddy)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=oliverbuddy&repo=BaseLibrary)](https://github.com/anuraghazra/github-readme-stats)
 
