@@ -1,5 +1,5 @@
 
-[![oliverbuddy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy)](https://github.com/anuraghazra/github-readme-stats)
+[![oliverbuddy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
 
 
 
@@ -20,8 +20,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 
 -->
-
-
-https://img.shields.io/badge/python-3.9-orange
-
 
