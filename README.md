@@ -5,7 +5,10 @@
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oliverbuddy)](https://github.com/oliverbuddy)
 
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
-https://img.shields.io/static/v1?label=<LABEL>&message=<MESSAGE>&color=<COLOR>
+
+
+![LABEL](https://img.shields.io/static/v1?label=<LABEL>&message=<MESSAGE>&color=<COLOR>)
+
 <!-- [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=oliverbuddy&repo=BaseLibrary)](https://github.com/anuraghazra/github-readme-stats) -->
 
 
