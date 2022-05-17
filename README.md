@@ -1,5 +1,5 @@
 
-![oliverbuddy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy&theme=radical&show_icons=true&count_private=true)
+![oliverbuddy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy&theme=radical&show_icons=true&count_private=true&bg_color=DEG)
 
 
 
