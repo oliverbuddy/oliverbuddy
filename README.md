@@ -1,5 +1,5 @@
 
-[![oliverbuddy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy&show_icons=true&count_private=true)](https://github.com/oliverbuddy)
+[![oliverbuddy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy&show_icons=true&count_private=true&border_color=BLACK)](https://github.com/oliverbuddy)
 
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oliverbuddy&layout=compact)](https://github.com/oliverbuddy)
