@@ -9,6 +9,7 @@
 ![Dart](https://img.shields.io/badge/-Dart-blue?style=flat-square&logo=dart&logoColor=BLUE) 
 ![JavaScript](https://img.shields.io/badge/-JavaScript-blueviolet?style=flat-square&logo=javascript&logoColor=BLUE) 
 ![Kotlin](https://img.shields.io/badge/-Kotlin-green?style=flat-square&logo=kotlin&logoColor=BLUE)
+![Python](https://img.shields.io/badge/-Python-green?style=flat-square&logo=python&logoColor=BLUE)
 
 
 <!-- [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=oliverbuddy&repo=BaseLibrary)](https://github.com/anuraghazra/github-readme-stats) -->
