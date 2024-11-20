@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Generate Snake Animation
-        uses: Platane/snk@v2.2.1
+        uses: Platane/snk@v2.3.1
         with:
           github_user_name: oliverbuddy
           output_path: dist/snake.svg
