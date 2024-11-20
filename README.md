@@ -3,7 +3,33 @@
 
 
 
+# 👋 Hi there, I'm [Your Name]!
 
+Welcome to my GitHub profile! I'm passionate about technology and open-source projects.
 
+---
 
-![Snake animation](https://github.com/oliverbuddy/oliverbuddy/blob/output/github-contribution-grid-snake.svg)
+## 🚀 About Me
+
+- 🌱 Currently learning: `Flutter` | `Docker` | `Kubernetes`
+- 💼 Skills: `Python` | `JavaScript` | `Git`
+- 💬 Let's connect: [Email](mailto:your-email@example.com) | [LinkedIn](https://linkedin.com/in/your-linkedin)
+
+---
+
+## 📊 GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=your-username&show_icons=true&theme=radical)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=your-username&layout=compact&theme=radical)
+
+---
+
+## 🎯 Fun Additions
+
+- 🐍 Contribution Snake:  
+  ![Snake animation](https://github.com/your-username/your-username/blob/output/github-contribution-grid-snake.svg)
+
+---
+
+Thank you for visiting my GitHub profile! 🎉
