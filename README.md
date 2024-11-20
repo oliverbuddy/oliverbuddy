@@ -8,7 +8,7 @@ Welcome to my GitHub profile! I'm passionate about technology and open-source pr
 
 - 🌱 Currently learning: `Flutter` | `Docker` | `Kubernetes`
 - 💼 Skills: `Python` | `JavaScript` | `Git`
-- 💬 Let's connect: [Email](mailto:your-email@example.com) | [LinkedIn](https://linkedin.com/in/your-linkedin)
+- 💬 Let's connect: [Email](mailto:qiwei0727@163.com) 
 
 ---
 
