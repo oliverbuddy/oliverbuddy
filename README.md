@@ -1,8 +1,3 @@
-
-[![oliverbuddy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy&count_private=true&show_icons=true&count_private=true&border_color=#b062b0)](https://github.com/oliverbuddy)
-
-
-
 # 👋 Hi there, I'm [oliverbuddy]!
 
 Welcome to my GitHub profile! I'm passionate about technology and open-source projects.
@@ -28,7 +23,7 @@ Welcome to my GitHub profile! I'm passionate about technology and open-source pr
 ## 🎯 Fun Additions
 
 - 🐍 Contribution Snake:  
-  ![Snake animation](https://github.com/oliverbuddy/your-username/blob/output/github-contribution-grid-snake.svg)
+  ![GitHub Contribution Snake](https://github.com/oliverbuddy/lock_box/blob/output/github-contribution-grid-snake.svg)
 
 ---
 
