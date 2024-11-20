@@ -3,7 +3,7 @@
 
 
 
-# 👋 Hi there, I'm [Your Name]!
+# 👋 Hi there, I'm [oliverbuddy]!
 
 Welcome to my GitHub profile! I'm passionate about technology and open-source projects.
 
@@ -19,16 +19,16 @@ Welcome to my GitHub profile! I'm passionate about technology and open-source pr
 
 ## 📊 GitHub Stats
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=your-username&show_icons=true&theme=radical)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy&show_icons=true&theme=radical)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=your-username&layout=compact&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oliverbuddy&layout=compact&theme=radical)
 
 ---
 
 ## 🎯 Fun Additions
 
 - 🐍 Contribution Snake:  
-  ![Snake animation](https://github.com/your-username/your-username/blob/output/github-contribution-grid-snake.svg)
+  ![Snake animation](https://github.com/oliverbuddy/your-username/blob/output/github-contribution-grid-snake.svg)
 
 ---
 
