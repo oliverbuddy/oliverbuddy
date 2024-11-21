@@ -1,34 +1,42 @@
-# 👋 Hi there, I'm oliverbuddy!
+# 👋 Hi there, I'm Oliverbuddy!
 
-Welcome to my GitHub profile! I'm passionate about technology and open-source projects.
+Welcome to my GitHub profile! I'm passionate about technology, coding, and open-source collaboration.
 
 ---
 
 ## 🚀 About Me
 
-- 🌱 Currently learning: `Flutter` | `Docker` | `Kubernetes`
-- 💼 Skills: `Python` | `JavaScript` | `Git`
-- 💬 Let's connect: [Email](mailto:qiwei0727@163.com) 
+- 🌱 **Currently Exploring**: `Flutter` | `Docker` | `Kubernetes`  
+- 💼 **Skills**: `Python` | `JavaScript` | `Git`  
+- 📫 **Connect with Me**: [📧 Email Me](mailto:qiwei0727@163.com)  
 
 ---
 
-## 📊 GitHub Stats
+## 📊 GitHub Insights
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy&show_icons=true&theme=radical)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oliverbuddy&layout=compact&theme=radical)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=oliverbuddy&show_icons=true&theme=transparent)  
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=oliverbuddy&layout=compact&theme=transparent)  
 
 ---
 
-## 🎯 Fun Additions
+## 🌐 Featured Projects
 
-- 🐍 Contribution Snake:  
+- 🔗 **[Project A](#)**: An exciting project description goes here.  
+- 🔗 **[Project B](#)**: Brief details about this project.  
+
+---
+
+## 🎯 Fun Additions  
+
+### 🐍 Contribution Snake Animation  
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oliverbuddy/oliverbuddy/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/oliverbuddy/oliverbuddy/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/oliverbuddy/oliverbuddy/output/github-contribution-grid-snake.svg">
-</picture>
+  <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/oliverbuddy/oliverbuddy/output/github-contribution-grid-snake.svg">
+</picture>  
 
 ---
 
-Thank you for visiting my GitHub profile! 🎉
+## 🎉 Thanks for Stopping By!
+
+Feel free to explore my repositories and connect with me for exciting collaborations! 🚀
