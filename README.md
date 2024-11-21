@@ -23,13 +23,11 @@ Welcome to my GitHub profile! I'm passionate about technology and open-source pr
 ## 🎯 Fun Additions
 
 - 🐍 Contribution Snake:  
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oliverbuddy/oliverbuddy/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/oliverbuddy/oliverbuddy/output/github-contribution-grid-snake.svg">
   <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/oliverbuddy/oliverbuddy/output/github-contribution-grid-snake.svg">
 </picture>
-
 ---
 
 Thank you for visiting my GitHub profile! 🎉
