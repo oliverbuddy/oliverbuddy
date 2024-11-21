@@ -1,4 +1,4 @@
-# 👋 Hi there, I'm [oliverbuddy]!
+# 👋 Hi there, I'm oliverbuddy!
 
 Welcome to my GitHub profile! I'm passionate about technology and open-source projects.
 
