@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="164" viewBox="0 0 1120 164" fill="none" role="img" aria-labelledby="stackTitle stackDesc">
+  <title id="stackTitle">Tech stack</title>
+  <desc id="stackDesc">语言、框架与工具链分组展示。</desc>
+
+  <defs>
+    <linearGradient id="panelAccent" x1="0" y1="0" x2="352" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="chipBg" x1="0" y1="0" x2="352" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity=".07"/>
+    </linearGradient>
+    <pattern id="panelGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#9FB4D0" stroke-opacity=".05"/>
+    </pattern>
+  </defs>
+
+  <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
+    <!-- 语言 -->
+    <g>
+      <rect x=".5" y=".5" width="351" height="163" rx="14" fill="#080C14" stroke="#1B2536"/>
+      <rect x=".5" y=".5" width="351" height="163" rx="14" fill="url(#panelGrid)"/>
+      <rect x="24" y="1" width="64" height="2" fill="url(#panelAccent)"/>
+      <text x="24" y="40" font-size="10" letter-spacing="2" fill="#6F809B">01 / LANGUAGES</text>
+      <text x="328" y="40" font-size="10" letter-spacing="1" fill="#33415A" text-anchor="end">04</text>
+      <path d="M24 56H328" stroke="#1B2536"/>
+      <g font-size="10" letter-spacing="1" fill="#B9D7E4" fill-opacity=".9">
+        <rect x="24" y="78" width="51" height="26" rx="6" fill="url(#chipBg)" stroke="#22D3EE" stroke-opacity=".26"/>
+        <text x="36" y="95">DART</text>
+        <rect x="85" y="78" width="65" height="26" rx="6" fill="url(#chipBg)" stroke="#22D3EE" stroke-opacity=".26"/>
+        <text x="97" y="95">PYTHON</text>
+        <rect x="24" y="114" width="93" height="26" rx="6" fill="url(#chipBg)" stroke="#22D3EE" stroke-opacity=".26"/>
+        <text x="36" y="131">JAVASCRIPT</text>
+        <rect x="127" y="114" width="44" height="26" rx="6" fill="url(#chipBg)" stroke="#22D3EE" stroke-opacity=".26"/>
+        <text x="139" y="131">C++</text>
+      </g>
+    </g>
+
+    <!-- 框架 -->
+    <g>
+      <rect x="384.5" y=".5" width="351" height="163" rx="14" fill="#080C14" stroke="#1B2536"/>
+      <rect x="384.5" y=".5" width="351" height="163" rx="14" fill="url(#panelGrid)"/>
+      <rect x="408" y="1" width="64" height="2" fill="url(#panelAccent)"/>
+      <text x="408" y="40" font-size="10" letter-spacing="2" fill="#6F809B">02 / FRAMEWORKS</text>
+      <text x="712" y="40" font-size="10" letter-spacing="1" fill="#33415A" text-anchor="end">03</text>
+      <path d="M408 56H712" stroke="#1B2536"/>
+      <g font-size="10" letter-spacing="1" fill="#B9D7E4" fill-opacity=".9">
+        <rect x="408" y="78" width="72" height="26" rx="6" fill="url(#chipBg)" stroke="#22D3EE" stroke-opacity=".26"/>
+        <text x="420" y="95">FLUTTER</text>
+        <rect x="490" y="78" width="72" height="26" rx="6" fill="url(#chipBg)" stroke="#22D3EE" stroke-opacity=".26"/>
+        <text x="502" y="95">WIDGETS</text>
+        <rect x="408" y="114" width="79" height="26" rx="6" fill="url(#chipBg)" stroke="#22D3EE" stroke-opacity=".26"/>
+        <text x="420" y="131">MARKDOWN</text>
+      </g>
+    </g>
+
+    <!-- 工具 -->
+    <g>
+      <rect x="768.5" y=".5" width="351" height="163" rx="14" fill="#080C14" stroke="#1B2536"/>
+      <rect x="768.5" y=".5" width="351" height="163" rx="14" fill="url(#panelGrid)"/>
+      <rect x="792" y="1" width="64" height="2" fill="url(#panelAccent)"/>
+      <text x="792" y="40" font-size="10" letter-spacing="2" fill="#6F809B">03 / TOOLING</text>
+      <text x="1096" y="40" font-size="10" letter-spacing="1" fill="#33415A" text-anchor="end">04</text>
+      <path d="M792 56H1096" stroke="#1B2536"/>
+      <g font-size="10" letter-spacing="1" fill="#B9D7E4" fill-opacity=".9">
+        <rect x="792" y="78" width="44" height="26" rx="6" fill="url(#chipBg)" stroke="#8B5CF6" stroke-opacity=".3"/>
+        <text x="804" y="95">GIT</text>
+        <rect x="846" y="78" width="65" height="26" rx="6" fill="url(#chipBg)" stroke="#8B5CF6" stroke-opacity=".3"/>
+        <text x="858" y="95">DOCKER</text>
+        <rect x="792" y="114" width="93" height="26" rx="6" fill="url(#chipBg)" stroke="#8B5CF6" stroke-opacity=".3"/>
+        <text x="804" y="131">KUBERNETES</text>
+        <rect x="895" y="114" width="44" height="26" rx="6" fill="url(#chipBg)" stroke="#8B5CF6" stroke-opacity=".3"/>
+        <text x="907" y="131">CLI</text>
+      </g>
+    </g>
+  </g>
+</svg>

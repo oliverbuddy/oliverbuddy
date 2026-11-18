@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="28" viewBox="0 0 1120 28" fill="none" role="img" aria-label="section divider">
+  <defs>
+    <linearGradient id="divLeftL" x1="0" y1="14" x2="548" y2="14" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0891B2" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0891B2" stop-opacity=".55"/>
+    </linearGradient>
+    <linearGradient id="divRightL" x1="572" y1="14" x2="1120" y2="14" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#0891B2" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M0 14H548" stroke="url(#divLeftL)"/>
+  <path d="M572 14H1120" stroke="url(#divRightL)"/>
+  <g stroke="#0891B2" stroke-opacity=".35">
+    <path d="M336 9v10M392 11v6M448 9v10M504 11v6"/>
+    <path d="M616 11v6M672 9v10M728 11v6M784 9v10"/>
+  </g>
+  <circle cx="280" cy="14" r="1.6" fill="#0891B2" fill-opacity=".6"/>
+  <circle cx="840" cy="14" r="1.6" fill="#7C3AED" fill-opacity=".7"/>
+  <rect x="552" y="6" width="16" height="16" rx="2" fill="none" stroke="#0891B2" stroke-opacity=".5" transform="rotate(45 560 14)"/>
+  <rect x="556" y="10" width="8" height="8" fill="none" stroke="#7C3AED" stroke-opacity=".7" transform="rotate(45 560 14)"/>
+  <circle cx="560" cy="14" r="1.5" fill="#0891B2"/>
+</svg>

@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="320" viewBox="0 0 1120 320" fill="none" role="img" aria-labelledby="heroTitleLight heroDescLight">
+  <title id="heroTitleLight">oliverbuddy — profile banner</title>
+  <desc id="heroDescLight">浅色科技感横幅，青蓝到紫色渐变、细网格与轨道节点。</desc>
+
+  <defs>
+    <linearGradient id="frameStrokeL" x1="0" y1="0" x2="1120" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0891B2" stop-opacity=".45"/>
+      <stop offset=".55" stop-color="#7C3AED" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#0891B2" stop-opacity=".18"/>
+    </linearGradient>
+    <linearGradient id="titleGradL" x1="64" y1="76" x2="560" y2="132" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset=".38" stop-color="#0E7490"/>
+      <stop offset="1" stop-color="#6D28D9"/>
+    </linearGradient>
+    <linearGradient id="arcGradL" x1="784" y1="40" x2="1008" y2="264" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0891B2" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity=".45"/>
+    </linearGradient>
+    <linearGradient id="chipGradL" x1="0" y1="0" x2="700" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0891B2" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity=".05"/>
+    </linearGradient>
+    <radialGradient id="glowCyanL">
+      <stop offset="0" stop-color="#0891B2" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#0891B2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowVioletL">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridL" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#0F172A" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+    <pattern id="scanL" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#0F172A" fill-opacity=".022"/>
+    </pattern>
+    <clipPath id="frameL">
+      <rect width="1120" height="320" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frameL)">
+    <rect width="1120" height="320" fill="#F7F9FC"/>
+    <circle cx="40" cy="0" r="330" fill="url(#glowCyanL)"/>
+    <circle cx="1090" cy="330" r="340" fill="url(#glowVioletL)"/>
+    <rect width="1120" height="320" fill="url(#gridL)"/>
+    <rect width="1120" height="320" fill="url(#scanL)"/>
+    <ellipse cx="560" cy="322" rx="520" ry="90" fill="#0891B2" fill-opacity=".05"/>
+    <path d="M0 300H1120" stroke="#0891B2" stroke-opacity=".14"/>
+
+    <!-- 右侧轨道图形 -->
+    <g>
+      <path d="M896 40A112 112 0 0 1 1008 152" stroke="url(#arcGradL)" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M896 264A112 112 0 0 1 784 152" stroke="#0891B2" stroke-opacity=".22" stroke-width="1"/>
+      <circle cx="896" cy="152" r="112" stroke="#7C3AED" stroke-opacity=".18"/>
+      <circle cx="896" cy="152" r="82" stroke="#0891B2" stroke-opacity=".3" stroke-dasharray="2 7"/>
+      <circle cx="896" cy="152" r="52" stroke="#334155" stroke-opacity=".16"/>
+      <path d="M756 152H1036" stroke="#334155" stroke-opacity=".09" stroke-dasharray="1 9"/>
+      <path d="M896 12V244" stroke="#334155" stroke-opacity=".09" stroke-dasharray="1 9"/>
+      <circle cx="896" cy="40" r="8" fill="#0891B2" fill-opacity=".14"/>
+      <circle cx="896" cy="40" r="3.4" fill="#0891B2"/>
+      <circle cx="978" cy="108" r="7" fill="#7C3AED" fill-opacity=".16"/>
+      <circle cx="978" cy="108" r="2.8" fill="#7C3AED"/>
+      <circle cx="840" cy="216" r="2.4" fill="#64748B"/>
+      <rect x="1032" y="196" width="6" height="6" fill="none" stroke="#0891B2" stroke-opacity=".55" transform="rotate(45 1035 199)"/>
+      <rect x="812" y="58" width="4" height="4" fill="#7C3AED" fill-opacity=".5"/>
+      <path d="M1008 152h28M784 152h-28M896 40V16M896 264v-24" stroke="#0891B2" stroke-opacity=".26"/>
+    </g>
+
+    <!-- 四角装饰 -->
+    <g stroke="#0891B2" stroke-opacity=".4" stroke-width="2" fill="none">
+      <path d="M22 50V22h28"/>
+      <path d="M1098 50V22h-28"/>
+      <path d="M22 270v28h28"/>
+      <path d="M1098 270v28h-28"/>
+    </g>
+
+    <!-- 顶部标识 -->
+    <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
+      <circle cx="70" cy="46" r="6.5" fill="none" stroke="#0891B2" stroke-opacity=".35"/>
+      <circle cx="70" cy="46" r="2.8" fill="#0891B2"/>
+      <text x="86" y="50" font-size="11" letter-spacing="3" fill="#64748B">GITHUB / PROFILE</text>
+      <text x="1056" y="50" font-size="10" letter-spacing="1.6" fill="#94A3B8" text-anchor="end">v2026.11</text>
+    </g>
+
+    <!-- 主标题 -->
+    <text x="64" y="124" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="60" font-weight="700" letter-spacing="2.4" fill="url(#titleGradL)">OLIVERBUDDY</text>
+
+    <!-- 副标题 -->
+    <text x="66" y="162" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="15" letter-spacing=".8" fill="#475569">独立开发者 · 移动工具 / 本地加密 / 行情组件</text>
+
+    <!-- 技术标签 -->
+    <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10" letter-spacing="1" fill="#334155">
+      <g>
+        <rect x="64" y="190" width="72" height="26" rx="6" fill="url(#chipGradL)" stroke="#0891B2" stroke-opacity=".25"/>
+        <text x="76" y="207">FLUTTER</text>
+        <rect x="144" y="190" width="51" height="26" rx="6" fill="url(#chipGradL)" stroke="#0891B2" stroke-opacity=".25"/>
+        <text x="156" y="207">DART</text>
+        <rect x="203" y="190" width="44" height="26" rx="6" fill="url(#chipGradL)" stroke="#0891B2" stroke-opacity=".25"/>
+        <text x="215" y="207">C++</text>
+        <rect x="255" y="190" width="65" height="26" rx="6" fill="url(#chipGradL)" stroke="#0891B2" stroke-opacity=".25"/>
+        <text x="267" y="207">PYTHON</text>
+        <rect x="328" y="190" width="93" height="26" rx="6" fill="url(#chipGradL)" stroke="#0891B2" stroke-opacity=".25"/>
+        <text x="340" y="207">JAVASCRIPT</text>
+        <rect x="429" y="190" width="44" height="26" rx="6" fill="url(#chipGradL)" stroke="#0891B2" stroke-opacity=".25"/>
+        <text x="441" y="207">GIT</text>
+        <rect x="481" y="190" width="65" height="26" rx="6" fill="url(#chipGradL)" stroke="#0891B2" stroke-opacity=".25"/>
+        <text x="493" y="207">DOCKER</text>
+        <rect x="554" y="190" width="93" height="26" rx="6" fill="url(#chipGradL)" stroke="#0891B2" stroke-opacity=".25"/>
+        <text x="566" y="207">KUBERNETES</text>
+      </g>
+    </g>
+
+    <!-- 底部信息 -->
+    <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" letter-spacing=".8">
+      <text x="64" y="262" fill="#64748B">SIGNAL</text>
+      <text x="118" y="262" fill="#334155">qiwei0727@163.com</text>
+      <text x="536" y="262" fill="#94A3B8" text-anchor="end">github.com/oliverbuddy</text>
+    </g>
+
+    <!-- 底部刻度 -->
+    <g stroke="#334155" stroke-opacity=".14">
+      <path d="M64 288v6M104 288v4M144 288v4M184 288v6M224 288v4M264 288v4M304 288v6M344 288v4M384 288v4M424 288v6M464 288v4M504 288v4M544 288v6M584 288v4M624 288v4M664 288v6M704 288v4M744 288v4M784 288v6M824 288v4M864 288v4M904 288v6M944 288v4M984 288v4M1024 288v6"/>
+    </g>
+  </g>
+
+  <rect x=".5" y=".5" width="1119" height="319" rx="18" fill="none" stroke="url(#frameStrokeL)"/>
+  <rect x="1.5" y="1.5" width="1117" height="317" rx="16.5" fill="none" stroke="#ffffff" stroke-opacity=".7"/>
+</svg>
