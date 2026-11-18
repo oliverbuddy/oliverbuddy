@@ -1,24 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="28" viewBox="0 0 1120 28" fill="none" role="img" aria-label="section divider">
-  <defs>
-    <linearGradient id="divLeft" x1="0" y1="14" x2="548" y2="14" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#22D3EE" stop-opacity="0"/>
-      <stop offset="1" stop-color="#22D3EE" stop-opacity=".55"/>
-    </linearGradient>
-    <linearGradient id="divRight" x1="572" y1="14" x2="1120" y2="14" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#8B5CF6" stop-opacity=".5"/>
-      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-
-  <path d="M0 14H548" stroke="url(#divLeft)"/>
-  <path d="M572 14H1120" stroke="url(#divRight)"/>
-  <g stroke="#22D3EE" stroke-opacity=".3">
-    <path d="M336 9v10M392 11v6M448 9v10M504 11v6"/>
-    <path d="M616 11v6M672 9v10M728 11v6M784 9v10"/>
-  </g>
-  <circle cx="280" cy="14" r="1.6" fill="#22D3EE" fill-opacity=".6"/>
-  <circle cx="840" cy="14" r="1.6" fill="#8B5CF6" fill-opacity=".7"/>
-  <rect x="552" y="6" width="16" height="16" rx="2" fill="none" stroke="#22D3EE" stroke-opacity=".55" transform="rotate(45 560 14)"/>
-  <rect x="556" y="10" width="8" height="8" fill="none" stroke="#8B5CF6" stroke-opacity=".75" transform="rotate(45 560 14)"/>
-  <circle cx="560" cy="14" r="1.5" fill="#5EE7F5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="36" viewBox="0 0 1120 36" fill="none" role="img" aria-labelledby="t d">
+  <title id="t">section divider</title>
+  <desc id="d">HUD 分隔线</desc>
+  <style>
+.led{animation:led 2.6s ease-in-out infinite}
+@keyframes led{0%,100%{opacity:1}50%{opacity:.22}}
+.sw{animation:sw 9s linear infinite}
+@keyframes sw{0%{transform:translateX(-80px)}100%{transform:translateX(1120px)}}
+.rd{animation:rd 14s linear infinite;transform-origin:0 0}
+@keyframes rd{to{transform:rotate(360deg)}}
+.pl{animation:pl 3.4s ease-in-out infinite}
+@keyframes pl{0%,100%{opacity:.9}50%{opacity:.2}}
+.bl{animation:bl 1.9s linear infinite}
+@keyframes bl{0%,44%{opacity:1}55%,94%{opacity:.1}100%{opacity:1}}
+.tc{animation:tc 7s linear infinite}
+@keyframes tc{to{stroke-dashoffset:-160}}
+</style>
+<defs><linearGradient id="dl" x1="0" y1="18" x2="536" y2="18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#22D3EE" stop-opacity="0"/><stop offset="1" stop-color="#22D3EE" stop-opacity=".6"/></linearGradient><linearGradient id="dr" x1="584" y1="18" x2="1120" y2="18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8B5CF6" stop-opacity=".6"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></linearGradient></defs><path d="M0 18H536" stroke="url(#dl)"/><path d="M584 18H1120" stroke="url(#dr)"/><path d="M0 18H536M584 18H1120" stroke="#22D3EE" stroke-opacity=".35" stroke-dasharray="2 12" class="tc"/><g stroke="#22D3EE" stroke-opacity=".28"><path d="M300 13v10"/><path d="M328 13v10"/><path d="M356 13v10"/><path d="M384 13v10"/><path d="M412 13v10"/><path d="M440 13v10"/><path d="M468 13v10"/><path d="M496 13v10"/><path d="M619 13v10"/><path d="M647 13v10"/><path d="M675 13v10"/><path d="M703 13v10"/><path d="M731 13v10"/><path d="M759 13v10"/><path d="M787 13v10"/><path d="M815 13v10"/></g><path d="M560 4L574 18L560 32L546 18Z" stroke="#22D3EE" stroke-opacity=".8"/><path d="M560 10L568 18L560 26L552 18Z" stroke="#8B5CF6" stroke-opacity=".7"/><circle cx="560" cy="18" r="2" fill="#22D3EE" class="led"/><rect x="336" y="16" width="4" height="4" fill="#8B5CF6" fill-opacity=".6"/><rect x="780" y="16" width="4" height="4" fill="#22D3EE" fill-opacity=".6"/>
 </svg>

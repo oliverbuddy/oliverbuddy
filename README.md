@@ -1,12 +1,12 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-    <img src="assets/hero-light.svg" alt="oliverbuddy — 独立开发者，移动工具 / 本地加密 / 行情组件" width="1120">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=2">
+    <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg?v=2">
+    <img src="assets/hero-light.svg?v=2" alt="oliverbuddy — 独立开发者，移动工具 / 本地加密 / 行情组件" width="1120">
   </picture>
 </p>
 
-## 01 — PROFILE
+## 01 // PROFILE
 
 做安静、克制的工具：手机端 Markdown 笔记、本地加密工具、行情桌面组件。  
 偏好本地优先、隐私友好、可长期维护的小型工程。
@@ -18,30 +18,30 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg">
-    <img src="assets/divider-light.svg" alt="" width="1120">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg?v=2">
+    <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg?v=2">
+    <img src="assets/divider-light.svg?v=2" alt="" width="1120">
   </picture>
 </p>
 
-## 02 — TECH MATRIX
+## 02 // TECH MATRIX
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg">
-    <img src="assets/stack-light.svg" alt="语言：Dart、Python、JavaScript、C++；框架：Flutter；工具：Git、Docker、Kubernetes" width="1120">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg?v=2">
+    <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=2">
+    <img src="assets/stack-light.svg?v=2" alt="语言：Dart、Python、JavaScript、C++；框架：Flutter；工具：Git、Docker、Kubernetes" width="1120">
   </picture>
 </p>
 
-## 03 — SELECTED WORK
+## 03 // SELECTED WORK
 
 <p align="center">
   <a href="https://github.com/oliverbuddy/private_notes">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/project-notes-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/project-notes-light.svg">
-      <img src="assets/project-notes-light.svg" alt="private_notes — 小记，手机端 Markdown 笔记" width="1120">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/project-notes-dark.svg?v=2">
+      <source media="(prefers-color-scheme: light)" srcset="assets/project-notes-light.svg?v=2">
+      <img src="assets/project-notes-light.svg?v=2" alt="private_notes — 小记，手机端 Markdown 笔记" width="1120">
     </picture>
   </a>
 </p>
@@ -49,9 +49,9 @@
 <p align="center">
   <a href="https://github.com/oliverbuddy/lock_box">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/project-lockbox-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/project-lockbox-light.svg">
-      <img src="assets/project-lockbox-light.svg" alt="lock_box — 本地加密私密信息工具，仅加解密不存储" width="1120">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/project-lockbox-dark.svg?v=2">
+      <source media="(prefers-color-scheme: light)" srcset="assets/project-lockbox-light.svg?v=2">
+      <img src="assets/project-lockbox-light.svg?v=2" alt="lock_box — 本地加密私密信息工具，仅加解密不存储" width="1120">
     </picture>
   </a>
 </p>
@@ -59,9 +59,9 @@
 <p align="center">
   <a href="https://github.com/oliverbuddy/binance_widget_assistant">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/project-binance-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/project-binance-light.svg">
-      <img src="assets/project-binance-light.svg" alt="binance_widget_assistant — 手机端桌面组件，实时显示币安价格" width="1120">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/project-binance-dark.svg?v=2">
+      <source media="(prefers-color-scheme: light)" srcset="assets/project-binance-light.svg?v=2">
+      <img src="assets/project-binance-light.svg?v=2" alt="binance_widget_assistant — 手机端桌面组件，实时显示币安价格" width="1120">
     </picture>
   </a>
 </p>
@@ -72,13 +72,13 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg">
-    <img src="assets/divider-light.svg" alt="" width="1120">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg?v=2">
+    <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg?v=2">
+    <img src="assets/divider-light.svg?v=2" alt="" width="1120">
   </picture>
 </p>
 
-## 04 — TELEMETRY
+## 04 // TELEMETRY
 
 <p align="center">
   <picture>
@@ -91,7 +91,7 @@
   </picture>
 </p>
 
-## 05 — CONTRIBUTION MATRIX
+## 05 // CONTRIBUTION MATRIX
 
 <p align="center">
   <picture>
@@ -101,7 +101,7 @@
   </picture>
 </p>
 
-## 06 — SIGNAL
+## 06 // SIGNAL
 
 <p align="center">
   <sub>OPEN TO COLLABORATION · MOBILE / TOOLING / PRIVACY-FIRST</sub>
@@ -111,12 +111,12 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg">
-    <img src="assets/divider-light.svg" alt="" width="1120">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg?v=2">
+    <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg?v=2">
+    <img src="assets/divider-light.svg?v=2" alt="" width="1120">
   </picture>
 </p>
 
 <p align="center">
-  <sub>OLIVERBUDDY · EST. 2015 · BUILT WITH STATIC SVG</sub>
+  <sub>OLIVERBUDDY · EST. 2015 · STATIC SVG / HUD v2.0</sub>
 </p>

@@ -1,45 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="168" viewBox="0 0 1120 168" fill="none" role="img" aria-labelledby="p2TitleL p2DescL">
-  <title id="p2TitleL">lock_box</title>
-  <desc id="p2DescL">本地加密私密信息工具：仅用于加解密，不做任何存储。</desc>
-  <defs>
-    <linearGradient id="cBgL" x1="0" y1="0" x2="1120" y2="168" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#F8FAFC"/>
-    </linearGradient>
-    <linearGradient id="cAccentL" x1="0" y1="26" x2="0" y2="142" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#7C3AED"/>
-      <stop offset="1" stop-color="#0891B2"/>
-    </linearGradient>
-    <pattern id="cGridL" width="28" height="28" patternUnits="userSpaceOnUse">
-      <path d="M28 0H0V28" fill="none" stroke="#0F172A" stroke-opacity=".03"/>
-    </pattern>
-    <clipPath id="cClipL"><rect width="1120" height="168" rx="16"/></clipPath>
-  </defs>
-
-  <g clip-path="url(#cClipL)">
-    <rect width="1120" height="168" fill="url(#cBgL)"/>
-    <rect width="1120" height="168" fill="url(#cGridL)"/>
-    <rect x="0" y="26" width="2" height="116" fill="url(#cAccentL)"/>
-    <circle cx="1100" cy="168" r="130" fill="#7C3AED" fill-opacity=".05"/>
-    <text x="38" y="110" font-family="'SFMono-Regular', Consolas, Menlo, monospace" font-size="44" fill="#E7EDF5">02</text>
-    <path d="M88 36V132" stroke="#E2E8F0"/>
-    <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
-      <text x="116" y="62" font-size="23" font-weight="700" letter-spacing=".5" fill="#0B1220">lock_box</text>
-      <text x="1084" y="50" font-size="10" letter-spacing="1.2" fill="#94A3B8" text-anchor="end">UPDATED 2024.11</text>
-      <text x="116" y="148" font-size="10" letter-spacing=".6" fill="#94A3B8">github.com/oliverbuddy/lock_box</text>
-      <g font-size="9" letter-spacing="1" fill="#6D28D9">
-        <rect x="116" y="108" width="42" height="22" rx="5" fill="#7C3AED" fill-opacity=".05" stroke="#7C3AED" stroke-opacity=".25"/>
-        <text x="126" y="123">C++</text>
-        <rect x="166" y="108" width="42" height="22" rx="5" fill="#7C3AED" fill-opacity=".05" stroke="#7C3AED" stroke-opacity=".25"/>
-        <text x="176" y="123">CLI</text>
-        <rect x="216" y="108" width="68" height="22" rx="5" fill="#7C3AED" fill-opacity=".05" stroke="#7C3AED" stroke-opacity=".25"/>
-        <text x="226" y="123">OFFLINE</text>
-      </g>
-      <rect x="900" y="104" width="184" height="34" rx="6" fill="#7C3AED" fill-opacity=".05" stroke="#7C3AED" stroke-opacity=".28"/>
-      <text x="992" y="125" font-size="10" letter-spacing="1.6" fill="#6D28D9" text-anchor="middle">OPEN REPOSITORY</text>
-    </g>
-    <text x="116" y="90" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="13" letter-spacing=".3" fill="#475569">本地加密私密信息工具：仅用于加解密，不做任何存储。</text>
-  </g>
-
-  <rect x=".5" y=".5" width="1119" height="167" rx="16" stroke="#E2E8F0"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="180" viewBox="0 0 1120 180" fill="none" role="img" aria-labelledby="t d">
+  <title id="t">lock_box</title>
+  <desc id="d">本地加密私密信息工具：仅用于加解密，不做任何存储。</desc>
+  <style>
+.led{animation:led 2.6s ease-in-out infinite}
+@keyframes led{0%,100%{opacity:1}50%{opacity:.22}}
+.sw{animation:sw 9s linear infinite}
+@keyframes sw{0%{transform:translateX(-80px)}100%{transform:translateX(1120px)}}
+.rd{animation:rd 14s linear infinite;transform-origin:0 0}
+@keyframes rd{to{transform:rotate(360deg)}}
+.pl{animation:pl 3.4s ease-in-out infinite}
+@keyframes pl{0%,100%{opacity:.9}50%{opacity:.2}}
+.bl{animation:bl 1.9s linear infinite}
+@keyframes bl{0%,44%{opacity:1}55%,94%{opacity:.1}100%{opacity:1}}
+.tc{animation:tc 7s linear infinite}
+@keyframes tc{to{stroke-dashoffset:-160}}
+</style>
+<defs><linearGradient id="cb" x1="0" y1="0" x2="1120" y2="180" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#F7FAFE"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient><linearGradient id="ca" x1="0" y1="0" x2="0" y2="180" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#6D28D9"/></linearGradient><pattern id="cg" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" stroke="#0F172A" stroke-opacity=".03"/></pattern><clipPath id="cc"><path d="M14.5 0.5H1105.5L1119.5 14.5V165.5L1105.5 179.5H14.5L0.5 165.5V14.5Z"/></clipPath></defs><g clip-path="url(#cc)"><rect width="1120" height="180" fill="url(#cb)"/><rect width="1120" height="180" fill="url(#cg)"/><circle cx="1080" cy="0" r="170" fill="#7C3AED" fill-opacity=".05"/><rect x="0" y="24" width="3" height="132" fill="url(#ca)"/><path d="M3 24h6" stroke="#7C3AED" stroke-opacity=".35"/><path d="M3 36h6" stroke="#7C3AED" stroke-opacity=".35"/><path d="M3 48h6" stroke="#7C3AED" stroke-opacity=".35"/><path d="M3 60h6" stroke="#7C3AED" stroke-opacity=".35"/><path d="M3 72h6" stroke="#7C3AED" stroke-opacity=".35"/><path d="M3 84h6" stroke="#7C3AED" stroke-opacity=".35"/><path d="M3 96h6" stroke="#7C3AED" stroke-opacity=".35"/><path d="M3 108h6" stroke="#7C3AED" stroke-opacity=".35"/><path d="M3 120h6" stroke="#7C3AED" stroke-opacity=".35"/><path d="M3 132h6" stroke="#7C3AED" stroke-opacity=".35"/><path d="M3 144h6" stroke="#7C3AED" stroke-opacity=".35"/><path d="M3 156h6" stroke="#7C3AED" stroke-opacity=".35"/><text x="38" y="120" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="46" font-weight="700" fill="none" stroke="#7C3AED" stroke-opacity=".3">02</text><text x="38" y="46" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="8.5" letter-spacing="2.4" fill="#8296AC">PRJ-02</text><path d="M38 54H72" stroke="#7C3AED" stroke-opacity=".5"/><path d="M96 34V146" stroke="#D3DFEC"/><text x="1086" y="44" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9" letter-spacing="1.4" fill="#8296AC" text-anchor="end">UPDATED 2024.11</text><text x="124" y="76" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="24" font-weight="700" letter-spacing="1.2" fill="#0B1220">lock_box</text><path d="M124 86H244" stroke="#7C3AED" stroke-opacity=".22"/><text x="124" y="108" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="13" letter-spacing=".3" fill="#51637A">本地加密私密信息工具：仅用于加解密，不做任何存储。</text><path d="M4.5 0H42.2L46.7 4.5V19.5L42.2 24H4.5L0 19.5V4.5Z" transform="translate(124 120)" fill="#7C3AED" fill-opacity=".06" stroke="#7C3AED" stroke-opacity=".26"/><text x="136" y="137" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.5" letter-spacing="1" fill="#0B1220" fill-opacity=".78">C++</text><path d="M4.5 0H42.2L46.7 4.5V19.5L42.2 24H4.5L0 19.5V4.5Z" transform="translate(179.7 120)" fill="#7C3AED" fill-opacity=".06" stroke="#7C3AED" stroke-opacity=".26"/><text x="191.7" y="137" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.5" letter-spacing="1" fill="#0B1220" fill-opacity=".78">CLI</text><path d="M4.5 0H69.8L74.30000000000001 4.5V19.5L69.8 24H4.5L0 19.5V4.5Z" transform="translate(235.39999999999998 120)" fill="#7C3AED" fill-opacity=".06" stroke="#7C3AED" stroke-opacity=".26"/><text x="247.39999999999998" y="137" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.5" letter-spacing="1" fill="#0B1220" fill-opacity=".78">OFFLINE</text><text x="124" y="162" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9" letter-spacing=".8" fill="#8296AC">github.com/oliverbuddy/lock_box</text><path d="M892 104H1080L1088 112V134L1080 142H892L884 134V112Z" fill="#7C3AED" fill-opacity=".07" stroke="#7C3AED" stroke-opacity=".4"/><path d="M910 123H1006" stroke="#7C3AED" stroke-opacity=".18"/><text x="986" y="128" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10" letter-spacing="1.6" fill="#0B1220" text-anchor="middle">OPEN REPOSITORY</text><rect class="sw" style="animation-delay:-6s;animation-duration:11s" x="0" y="0" width="1.5" height="180" fill="#7C3AED" fill-opacity=".12"/></g><path d="M14.5 0.5H1105.5L1119.5 14.5V165.5L1105.5 179.5H14.5L0.5 165.5V14.5Z" stroke="#D3DFEC"/><path d="M21.0 7.0H1099.0L1113.0 21.0V159.0L1099.0 173.0H21.0L7.0 159.0V21.0Z" stroke="#7C3AED" stroke-opacity=".16"/><path d="M18 48V18H48" stroke="#7C3AED" stroke-opacity=".5" stroke-width="2"/><path d="M1102 132V162H1072" stroke="#7C3AED" stroke-opacity=".5" stroke-width="2"/><rect x="1086" y="70" width="16" height="16" fill="none" stroke="#0891B2" stroke-opacity=".28"/>
 </svg>
