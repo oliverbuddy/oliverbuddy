@@ -192,7 +192,9 @@ def stats_svg(theme: str, user: dict, repos: list[dict], top_n: int) -> str:
     p = PAL[theme]
     w, h = 1120, 200
 
-    public = [r for r in repos if not r.get("fork") and not r.get("archived")]
+    public = [r for r in repos
+              if not r.get("fork") and not r.get("archived")
+              and str(r.get("name", "")).lower() != str((r.get("owner") or {}).get("login", "")).lower()]
     stars = sum(int(r.get("stargazers_count") or 0) for r in public)
     langs = Counter(r["language"] for r in public if r.get("language"))
     top = langs.most_common(top_n)
@@ -263,7 +265,7 @@ def stats_svg(theme: str, user: dict, repos: list[dict], top_n: int) -> str:
                  f'fill="{p["ink"]}" fill-opacity=".78" text-anchor="end">{value}</text>')
     a.append(f'<circle cx="1044" cy="176" r="2.4" fill="{p["line"]}" class="led"/>')
     a.append(f'<text x="48" y="182" font-family="{MONO}" font-size="7.5" letter-spacing="1.4" '
-             f'fill="{p["dim"]}">NON-FORK PUBLIC REPOS / AUTO-GENERATED</text>')
+             f'fill="{p["dim"]}">PUBLIC REPOS / EXCL. PROFILE REPO</text>')
     a.append(f'<text x="1072" y="182" font-family="{MONO}" font-size="7.5" letter-spacing="1.4" '
              f'fill="{p["dim"]}" text-anchor="end">SYNC / DAILY</text>')
     a.append('</g>')

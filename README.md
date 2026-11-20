@@ -69,9 +69,9 @@
 <!-- STATS:START -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg?v=d2974655">
-    <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=f86ac671">
-    <img src="assets/stats-light.svg?v=f86ac671" alt="oliverbuddy 的公开仓库统计" width="1120">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg?v=681b139a">
+    <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=d5c45da5">
+    <img src="assets/stats-light.svg?v=d5c45da5" alt="oliverbuddy 的公开仓库统计" width="1120">
   </picture>
 </p>
 <!-- STATS:END -->
