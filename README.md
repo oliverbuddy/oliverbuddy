@@ -36,39 +36,25 @@
 
 ## 03 // SELECTED WORK
 
+<!-- PROJECTS:START -->
 <p align="center">
   <a href="https://github.com/oliverbuddy/private_notes">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/project-notes-dark.svg?v=2">
-      <source media="(prefers-color-scheme: light)" srcset="assets/project-notes-light.svg?v=2">
-      <img src="assets/project-notes-light.svg?v=2" alt="private_notes — 小记，手机端 Markdown 笔记" width="1120">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/project-private-notes-dark.svg?v=a6f140c6">
+      <source media="(prefers-color-scheme: light)" srcset="assets/project-private-notes-light.svg?v=39d642b9">
+      <img src="assets/project-private-notes-light.svg?v=39d642b9" alt="private_notes — 小记 · 手机端 Markdown 笔记（Flutter）" width="1120">
     </picture>
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/oliverbuddy/lock_box">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/project-lockbox-dark.svg?v=2">
-      <source media="(prefers-color-scheme: light)" srcset="assets/project-lockbox-light.svg?v=2">
-      <img src="assets/project-lockbox-light.svg?v=2" alt="lock_box — 本地加密私密信息工具，仅加解密不存储" width="1120">
-    </picture>
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/oliverbuddy/binance_widget_assistant">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/project-binance-dark.svg?v=2">
-      <source media="(prefers-color-scheme: light)" srcset="assets/project-binance-light.svg?v=2">
-      <img src="assets/project-binance-light.svg?v=2" alt="binance_widget_assistant — 手机端桌面组件，实时显示币安价格" width="1120">
-    </picture>
-  </a>
+  <sub>AUTO-SYNC · 非 fork / 非归档 / 有描述 / 非空仓库 / 最近更新前 3 个 · 规则见 <a href="https://github.com/oliverbuddy/oliverbuddy/blob/main/scripts/profile_config.json">profile_config.json</a></sub>
 </p>
 
 <p align="center">
   <sub><a href="https://github.com/oliverbuddy?tab=repositories">ALL REPOSITORIES →</a></sub>
 </p>
+<!-- PROJECTS:END -->
 
 <p align="center">
   <picture>
@@ -80,16 +66,15 @@
 
 ## 04 // TELEMETRY
 
+<!-- STATS:START -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=oliverbuddy&amp;show_icons=true&amp;bg_color=00000000&amp;title_color=22D3EE&amp;icon_color=A78BFA&amp;text_color=C3D3E6&amp;border_color=1E293B&amp;border_radius=12">
-    <img src="https://github-readme-stats.vercel.app/api?username=oliverbuddy&amp;show_icons=true&amp;bg_color=00000000&amp;title_color=0E7490&amp;icon_color=7C3AED&amp;text_color=334155&amp;border_color=E2E8F0&amp;border_radius=12" alt="GitHub 统计" height="170">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=oliverbuddy&amp;layout=compact&amp;langs_count=6&amp;bg_color=00000000&amp;title_color=22D3EE&amp;text_color=C3D3E6&amp;border_color=1E293B&amp;border_radius=12">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=oliverbuddy&amp;layout=compact&amp;langs_count=6&amp;bg_color=00000000&amp;title_color=0E7490&amp;text_color=334155&amp;border_color=E2E8F0&amp;border_radius=12" alt="常用语言" height="170">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg?v=1040dd03">
+    <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=b931068c">
+    <img src="assets/stats-light.svg?v=b931068c" alt="oliverbuddy 的公开仓库统计" width="1120">
   </picture>
 </p>
+<!-- STATS:END -->
 
 ## 05 // CONTRIBUTION MATRIX
 
@@ -99,6 +84,10 @@
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/oliverbuddy/oliverbuddy/output/github-contribution-grid-snake.svg">
     <img src="https://raw.githubusercontent.com/oliverbuddy/oliverbuddy/output/github-contribution-grid-snake.svg" alt="贡献蛇形动画" width="100%">
   </picture>
+</p>
+
+<p align="center">
+  <sub>ANIMATION FROM <code>output</code> BRANCH · 若未加载可直接访问 <a href="https://github.com/oliverbuddy/oliverbuddy/tree/output">output 分支</a></sub>
 </p>
 
 ## 06 // SIGNAL

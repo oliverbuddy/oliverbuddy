@@ -1,0 +1,12 @@
+{
+  "projects": [
+    {
+      "name": "private_notes",
+      "slug": "private-notes",
+      "files": [
+        "project-private-notes-dark.svg",
+        "project-private-notes-light.svg"
+      ]
+    }
+  ]
+}

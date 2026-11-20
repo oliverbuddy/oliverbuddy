@@ -1,0 +1,17 @@
+{
+  "username": "oliverbuddy",
+  "max_projects": 3,
+  "sort": "pushed_at",
+  "filters": {
+    "exclude_forks": true,
+    "exclude_archived": true,
+    "exclude_profile_repo": true,
+    "exclude_without_description": true,
+    "exclude_empty_repos": true,
+    "require_topics": false
+  },
+  "exclude_repos": [],
+  "stats": {
+    "top_languages": 4
+  }
+}

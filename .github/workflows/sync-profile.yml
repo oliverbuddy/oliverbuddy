@@ -1,0 +1,71 @@
+name: Sync Profile
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/sync_profile.py"
+      - "scripts/profile_config.json"
+      - ".github/workflows/sync-profile.yml"
+      - "README.md"
+  schedule:
+    - cron: "17 3 * * *" # 每天 03:17 UTC（北京时间 11:17）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-profile
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate project cards and stats
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/sync_profile.py
+
+      - name: Validate changed paths
+        run: |
+          set -euo pipefail
+          git add -A README.md assets
+          changed="$(git diff --cached --name-only)"
+          if [ -z "$changed" ]; then
+            echo "no changes staged"
+            exit 0
+          fi
+          echo "$changed"
+          bad="$(echo "$changed" | grep -Ev '^(README\.md|assets/(projects\.json|(project|stats)-[A-Za-z0-9._-]+\.svg))$' || true)"
+          if [ -n "$bad" ]; then
+            echo "::error::unexpected paths staged:"
+            echo "$bad"
+            exit 1
+          fi
+
+      - name: Commit and push
+        run: |
+          set -euo pipefail
+          if git diff --cached --quiet; then
+            echo "already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(profile): sync selected projects and stats"
+          git push origin HEAD:main
