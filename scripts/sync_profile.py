@@ -101,19 +101,34 @@ def month(value) -> str:
 
 
 def project_block(projects: list[dict], cfg: dict) -> str:
-    """项目列表 + 规则说明。规则说明跟随配置生成，避免文案与配置脱节。"""
+    """项目卡片 + 折叠的筛选规则。卡片用引用块，信息仍是可选中的纯文本。"""
     if projects:
-        lines = []
-        for repo in projects:
+        cards = []
+        for index, repo in enumerate(projects, start=1):
             name = clean(repo.get("name")) or "repository"
             url = str(repo.get("html_url") or "")
             desc = clean(repo.get("description")) or "无描述"
-            meta = [f"`{clean(repo.get('language')) or '—'}`", f"更新 {month(repo.get('pushed_at'))}"]
+            tags: list[str] = []
+            seen: set[str] = set()
+            for tag in [repo.get("language"), *(repo.get("topics") or [])]:
+                label = clean(tag)
+                if label and label.lower() not in seen:
+                    seen.add(label.lower())
+                    tags.append(f"`{label}`")
+            meta = []
+            if tags:
+                meta.append(" ".join(tags[:4]))
+            meta.append(f"更新 `{month(repo.get('pushed_at'))}`")
             stars = int(repo.get("stargazers_count") or 0)
             if stars:
-                meta.append(f"★ {stars}")
-            lines.append(f"- **[{name}]({url})** — {desc}  \n  " + " · ".join(meta))
-        body = "\n".join(lines)
+                meta.append(f"★ `{stars}`")
+            meta.append(f"[仓库 →]({url})")
+            cards.append(
+                f"> **{index:02d} · [{name}]({url})**  \n"
+                f"> {desc}  \n"
+                f"> " + " · ".join(meta)
+            )
+        body = "\n\n".join(cards)
     else:
         body = "_暂无符合筛选规则的公开仓库。_"
 
@@ -124,12 +139,18 @@ def project_block(projects: list[dict], cfg: dict) -> str:
         bits.append("有描述")
     if rules.get("exclude_empty_repos", True):
         bits.append("非空仓库")
-    bits.append(f"最近更新前 {int(cfg.get('max_projects', 3))} 个")
     username = cfg.get("username") or "oliverbuddy"
-    note = ('<p align="center"><sub>AUTO-SYNC · ' + " / ".join(bits)
-            + f' · <a href="https://github.com/{username}/{username}/blob/main/scripts/profile_config.json">筛选规则</a>'
-            + f' · <a href="https://github.com/{username}?tab=repositories">全部仓库 →</a></sub></p>')
-    return body + "\n\n" + note
+    details = (
+        "<details>\n"
+        "<summary><sub>AUTO-SYNC · 筛选规则 / 全部仓库</sub></summary>\n\n"
+        f"- 筛选：{' / '.join(bits)}\n"
+        f"- 排序：按最近更新，取前 {int(cfg.get('max_projects', 3))} 个\n"
+        "- 同步：每天由 GitHub Actions 自动刷新\n\n"
+        f"[筛选规则](https://github.com/{username}/{username}/blob/main/scripts/profile_config.json)"
+        f" · [全部仓库 →](https://github.com/{username}?tab=repositories)\n\n"
+        "</details>"
+    )
+    return body + "\n\n" + details
 
 
 def stats_block(user: dict, repos: list[dict]) -> str:
@@ -143,12 +164,20 @@ def stats_block(user: dict, repos: list[dict]) -> str:
     lang, lang_count = (top[0][0], top[0][1]) if top else ("—", 0)
     since = str(user.get("created_at") or "")[:4] or "—"
     followers = int(user.get("followers") or 0)
-    lines = [
-        f"- **公开仓库** {len(public)} · **Star** {stars} · **关注者** {followers}",
-        f"- **主要语言** {lang}（{count_word(lang_count)}）· **账号创建于** {since}",
-        "",
-        "<sub>数字来自 GitHub API（不含 profile 仓库），工作流每日自动刷新。</sub>",
+    rows = [
+        ("PROFILE", login or "—"),
+        ("REPOS", str(len(public))),
+        ("STARS", str(stars)),
+        ("FOLLOWERS", str(followers)),
+        ("MAIN", f"{lang} · {count_word(lang_count)}"),
+        ("SINCE", since),
     ]
+    width = max(len(key) for key, _ in rows) + 2
+    lines = ["```console"]
+    lines += [f"{key:<{width}}{value}" for key, value in rows]
+    lines.append("```")
+    lines.append("")
+    lines.append("<sub>数字来自 GitHub API（不含 profile 仓库），工作流每日自动刷新。</sub>")
     return "\n".join(lines)
 
 
