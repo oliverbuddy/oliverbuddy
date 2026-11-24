@@ -10,8 +10,5 @@
     "exclude_empty_repos": true,
     "require_topics": false
   },
-  "exclude_repos": [],
-  "stats": {
-    "top_languages": 4
-  }
+  "exclude_repos": []
 }
