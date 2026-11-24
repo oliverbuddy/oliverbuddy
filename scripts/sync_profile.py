@@ -34,24 +34,20 @@ CN = "'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif"
 
 PAL = {
     "dark": dict(
-        bg="#04060B", panel="#070C15", panel2="#0A1120",
-        ink="#E9F3FF", muted="#8298B0", dim="#455A72", faint="#2A3A4E",
-        line="#22D3EE", line2="#8B5CF6", border="#182738",
-        grid="#9FB4D0", accent="#22D3EE",
+        bg="#060A12", panel="#0A1120", panel2="#0C1524",
+        ink="#EAF2FF", body="#B8C8DA", muted="#8FA3B8", dim="#6C8199",
+        line="#22D3EE", line2="#8B5CF6", border="#1C2B3D",
     ),
     "light": dict(
-        bg="#F2F6FB", panel="#FFFFFF", panel2="#F7FAFE",
-        ink="#0B1220", muted="#51637A", dim="#8296AC", faint="#B9C7D8",
-        line="#0891B2", line2="#6D28D9", border="#D3DFEC",
-        grid="#0F172A", accent="#0891B2",
+        bg="#F4F7FB", panel="#FFFFFF", panel2="#F7FAFE",
+        ink="#0B1220", body="#3D4E63", muted="#5A6D84", dim="#5F7188",
+        line="#0E7490", line2="#6D28D9", border="#D7E2EF",
     ),
 }
 
 CSS = """
-.led{animation:led 2.6s ease-in-out infinite}
-@keyframes led{0%,100%{opacity:1}50%{opacity:.22}}
-.sw{animation:sw 9s linear infinite}
-@keyframes sw{0%{transform:translateX(-80px)}100%{transform:translateX(1120px)}}
+.led{animation:led 2.8s ease-in-out infinite}
+@keyframes led{0%,100%{opacity:1}50%{opacity:.25}}
 """
 
 
@@ -59,7 +55,7 @@ def esc(value: object) -> str:
     return html.escape(str(value), quote=True)
 
 
-def frame(w: float, h: float, c: float, i: float = 0.5) -> str:
+def frame(w: float, h: float, c: float = 12, i: float = 0.5) -> str:
     x0, y0, x1, y1 = i, i, w - i, h - i
     c = min(c, (x1 - x0) / 2, (y1 - y0) / 2)
     return (f"M{x0+c:.1f} {y0:.1f}H{x1-c:.1f}L{x1:.1f} {y0+c:.1f}"
@@ -72,16 +68,6 @@ def svg(w: int, h: int, body: str, title: str, desc: str) -> str:
             f'viewBox="0 0 {w} {h}" fill="none" role="img" aria-labelledby="t d">\n'
             f'  <title id="t">{esc(title)}</title>\n  <desc id="d">{esc(desc)}</desc>\n'
             f'  <style>{CSS}</style>\n{body}\n</svg>\n')
-
-
-def tickmarks(x0: int, x1: int, y: int, step: int, color: str, op: str, big: int = 6) -> str:
-    out, x, i = [], x0, 0
-    while x <= x1:
-        out.append(f'<path d="M{x} {y}v{big if i % 5 == 0 else 3}" '
-                   f'stroke="{color}" stroke-opacity="{op}"/>')
-        x += step
-        i += 1
-    return "".join(out)
 
 
 # ------------------------------------------------------------------ projects
@@ -119,78 +105,69 @@ def chips_for(repo: dict) -> list[str]:
 
 
 def card_svg(theme: str, idx: int, repo: dict) -> str:
+    """项目卡：1012 宽三栏（身份 / 摘要与标签 / 元数据），与统计面板共用 352·684 分栏。"""
     p = PAL[theme]
-    w, h = 1120, 180
-    name = repo["name"]
+    w, h = 1012, 176
+    name = truncate(repo["name"], 292, 26)
     raw_desc = (repo.get("description") or "").strip()
-    desc = truncate(raw_desc, 690, 13) if raw_desc else "Public repository."
+    desc = truncate(raw_desc, 284, 13) if raw_desc else "Public repository."
     updated = str(repo.get("pushed_at") or "")[:7].replace("-", ".")
     stars = int(repo.get("stargazers_count") or 0)
-    url = str(repo["html_url"]).replace("https://", "")
+    lang = (repo.get("language") or "N/A").upper()
+    url = str(repo.get("html_url") or "").replace("https://", "")
     chips = chips_for(repo)
-    accent = p["line2"] if idx % 2 == 0 else p["line"]
 
     a = [f'<defs>'
-         f'<linearGradient id="cb" x1="0" y1="0" x2="1120" y2="180" gradientUnits="userSpaceOnUse">'
+         f'<linearGradient id="cb" x1="0" y1="0" x2="0" y2="{h}" gradientUnits="userSpaceOnUse">'
          f'<stop offset="0" stop-color="{p["panel2"]}"/><stop offset="1" stop-color="{p["panel"]}"/></linearGradient>'
-         f'<linearGradient id="ca" x1="0" y1="0" x2="0" y2="180" gradientUnits="userSpaceOnUse">'
-         f'<stop offset="0" stop-color="{accent}"/><stop offset="1" stop-color="{p["line2"]}"/></linearGradient>'
-         f'<pattern id="cg" width="28" height="28" patternUnits="userSpaceOnUse">'
-         f'<path d="M28 0H0V28" stroke="{p["grid"]}" stroke-opacity="{".04" if theme == "dark" else ".03"}"/></pattern>'
-         f'<clipPath id="cc"><path d="{frame(w, h, 14)}"/></clipPath></defs>']
+         f'<linearGradient id="ca" x1="0" y1="0" x2="0" y2="{h}" gradientUnits="userSpaceOnUse">'
+         f'<stop offset="0" stop-color="{p["line"]}"/><stop offset="1" stop-color="{p["line2"]}"/></linearGradient>'
+         f'<clipPath id="cc"><path d="{frame(w, h)}"/></clipPath></defs>']
     a.append('<g clip-path="url(#cc)">')
     a.append(f'<rect width="{w}" height="{h}" fill="url(#cb)"/>')
-    a.append(f'<rect width="{w}" height="{h}" fill="url(#cg)"/>')
-    a.append(f'<circle cx="1080" cy="0" r="170" fill="{accent}" '
-             f'fill-opacity="{".06" if theme == "dark" else ".05"}"/>')
-    a.append('<rect x="0" y="24" width="3" height="132" fill="url(#ca)"/>')
-    for y in range(24, 157, 12):
-        a.append(f'<path d="M3 {y}h6" stroke="{accent}" stroke-opacity=".35"/>')
-    a.append(f'<text x="38" y="120" font-family="{MONO}" font-size="46" font-weight="700" '
-             f'fill="none" stroke="{accent}" stroke-opacity=".3">{idx:02d}</text>')
-    a.append(f'<text x="38" y="46" font-family="{MONO}" font-size="8.5" letter-spacing="2.4" '
-             f'fill="{p["dim"]}">PRJ-{idx:02d}</text>')
-    a.append(f'<path d="M38 54H72" stroke="{accent}" stroke-opacity=".5"/>')
-    a.append(f'<path d="M96 34V146" stroke="{p["border"]}"/>')
-    a.append(f'<text x="1086" y="44" font-family="{MONO}" font-size="9" letter-spacing="1.4" '
-             f'fill="{p["dim"]}" text-anchor="end">UPDATED {esc(updated)}</text>')
-    a.append(f'<text x="1086" y="60" font-family="{MONO}" font-size="8.5" letter-spacing="1.4" '
-             f'fill="{p["dim"]}" text-anchor="end">STAR {stars:03d}</text>')
-    a.append(f'<text x="124" y="76" font-family="{MONO}" font-size="24" font-weight="700" '
+    a.append(f'<rect x="0" y="32" width="3" height="{h-64}" fill="url(#ca)"/>')
+    a.append(f'<path d="M352 32V152" stroke="{p["border"]}"/>')
+    a.append(f'<path d="M684 32V152" stroke="{p["border"]}"/>')
+
+    a.append(f'<text x="32" y="44" font-family="{MONO}" font-size="10" letter-spacing="2.4" '
+             f'fill="{p["dim"]}">PROJECT // {idx:02d}</text>')
+    a.append(f'<text x="32" y="92" font-family="{MONO}" font-size="26" font-weight="700" '
              f'letter-spacing="1.2" fill="{p["ink"]}">{esc(name)}</text>')
-    a.append(f'<path d="M124 86H{124 + min(len(name) * 15, 520)}" stroke="{accent}" stroke-opacity=".22"/>')
-    a.append(f'<text x="124" y="108" font-family="{CN}" font-size="13" letter-spacing=".3" '
-             f'fill="{p["muted"]}">{esc(desc)}</text>')
-    x = 124
-    for chip in chips:
-        cw = len(chip) * 6.9 + 26
-        a.append(f'<path d="{frame(cw, 24, 4, 0)}" transform="translate({x} 120)" '
-                 f'fill="{accent}" fill-opacity=".06" stroke="{accent}" stroke-opacity=".26"/>')
-        a.append(f'<text x="{x + 12}" y="137" font-family="{MONO}" font-size="9.5" letter-spacing="1" '
-                 f'fill="{p["ink"]}" fill-opacity=".78">{esc(chip)}</text>')
-        x += cw + 9
-    a.append(f'<text x="124" y="162" font-family="{MONO}" font-size="9" letter-spacing=".8" '
+    a.append(f'<text x="32" y="126" font-family="{MONO}" font-size="10" letter-spacing=".4" '
              f'fill="{p["dim"]}">{esc(url)}</text>')
-    a.append(f'<path d="M892 104H1080L1088 112V134L1080 142H892L884 134V112Z" '
-             f'fill="{accent}" fill-opacity=".07" stroke="{accent}" stroke-opacity=".4"/>')
-    a.append(f'<path d="M910 123H1006" stroke="{accent}" stroke-opacity=".18"/>')
-    a.append(f'<text x="986" y="128" font-family="{MONO}" font-size="10" letter-spacing="1.6" '
-             f'fill="{p["ink"]}" text-anchor="middle">OPEN REPOSITORY</text>')
-    a.append(f'<rect class="sw" style="animation-delay:-{idx * 3}s;animation-duration:11s" '
-             f'x="0" y="0" width="1.5" height="{h}" fill="{accent}" fill-opacity=".12"/>')
+
+    a.append(f'<text x="380" y="92" font-family="{CN}" font-size="13" letter-spacing=".3" '
+             f'fill="{p["body"]}">{esc(desc)}</text>')
+    x = 380
+    for chip in chips:
+        cw = len(chip) * 7.2 + 20
+        a.append(f'<path d="{frame(cw, 24, 4, 0)}" transform="translate({x} 116)" '
+                 f'fill="{p["line"]}" fill-opacity=".05" stroke="{p["line"]}" stroke-opacity=".28"/>')
+        a.append(f'<text x="{x + cw/2:.1f}" y="132" font-family="{MONO}" font-size="10" '
+                 f'letter-spacing="1.2" fill="{p["ink"]}" fill-opacity=".85" '
+                 f'text-anchor="middle">{esc(chip)}</text>')
+        x += cw + 8
+
+    rows = [("UPDATED", updated), ("STARS", f"{stars:03d}"), ("LANGUAGE", lang)]
+    for i, (label, value) in enumerate(rows):
+        y = 92 + i * 28
+        a.append(f'<text x="712" y="{y}" font-family="{MONO}" font-size="10" letter-spacing="1.8" '
+                 f'fill="{p["dim"]}">{label}</text>')
+        a.append(f'<path d="M800 {y}H916" stroke="{p["border"]}" stroke-dasharray="1.5 5"/>')
+        a.append(f'<text x="980" y="{y}" font-family="{MONO}" font-size="11" letter-spacing=".8" '
+                 f'fill="{p["ink"]}" text-anchor="end">{esc(value)}</text>')
     a.append('</g>')
-    a.append(f'<path d="{frame(w, h, 14)}" stroke="{p["border"]}"/>')
-    a.append(f'<path d="{frame(w, h, 14, 7)}" stroke="{accent}" stroke-opacity=".16"/>')
-    a.append(f'<path d="M18 48V18H48" stroke="{accent}" stroke-opacity=".5" stroke-width="2"/>')
-    a.append(f'<path d="M1102 132v30h-30" stroke="{accent}" stroke-opacity=".5" stroke-width="2"/>')
-    a.append(f'<rect x="1086" y="70" width="16" height="16" fill="none" stroke="{p["line"]}" stroke-opacity=".28"/>')
+    a.append(f'<path d="{frame(w, h)}" stroke="{p["border"]}"/>')
+    a.append(f'<path d="M16 40V16H40" stroke="{p["line"]}" stroke-opacity=".55" stroke-width="2"/>')
+    a.append(f'<path d="{w-16} {h-40}V{h-16}H{w-40}" stroke="{p["line"]}" stroke-opacity=".55" stroke-width="2"/>')
     return svg(w, h, "".join(a), name, raw_desc or "Public repository")
 
 
 # ------------------------------------------------------------------ stats
 def stats_svg(theme: str, user: dict, repos: list[dict], top_n: int) -> str:
+    """统计面板：1012 宽三栏，数值 / 语言 / 账号信号。"""
     p = PAL[theme]
-    w, h = 1120, 200
+    w, h = 1012, 192
 
     public = [r for r in repos
               if not r.get("fork") and not r.get("archived")
@@ -198,81 +175,62 @@ def stats_svg(theme: str, user: dict, repos: list[dict], top_n: int) -> str:
     stars = sum(int(r.get("stargazers_count") or 0) for r in public)
     langs = Counter(r["language"] for r in public if r.get("language"))
     top = langs.most_common(top_n)
-    max_count = top[0][1] if top else 1
     since = str(user.get("created_at") or "")[:4] or "----"
 
     a = [f'<defs>'
-         f'<linearGradient id="sb" x1="0" y1="0" x2="1120" y2="200" gradientUnits="userSpaceOnUse">'
+         f'<linearGradient id="sb" x1="0" y1="0" x2="0" y2="{h}" gradientUnits="userSpaceOnUse">'
          f'<stop offset="0" stop-color="{p["panel2"]}"/><stop offset="1" stop-color="{p["panel"]}"/></linearGradient>'
-         f'<linearGradient id="ca" x1="0" y1="20" x2="0" y2="180" gradientUnits="userSpaceOnUse">'
+         f'<linearGradient id="ca" x1="0" y1="0" x2="0" y2="{h}" gradientUnits="userSpaceOnUse">'
          f'<stop offset="0" stop-color="{p["line"]}"/><stop offset="1" stop-color="{p["line2"]}"/></linearGradient>'
-         f'<pattern id="sg" width="28" height="28" patternUnits="userSpaceOnUse">'
-         f'<path d="M28 0H0V28" stroke="{p["grid"]}" stroke-opacity="{".04" if theme == "dark" else ".03"}"/></pattern>'
-         f'<clipPath id="sc"><path d="{frame(w, h, 14)}"/></clipPath></defs>']
+         f'<clipPath id="sc"><path d="{frame(w, h)}"/></clipPath></defs>']
     a.append('<g clip-path="url(#sc)">')
     a.append(f'<rect width="{w}" height="{h}" fill="url(#sb)"/>')
-    a.append(f'<rect width="{w}" height="{h}" fill="url(#sg)"/>')
-    a.append(f'<circle cx="20" cy="0" r="220" fill="{p["line"]}" '
-             f'fill-opacity="{".05" if theme == "dark" else ".04"}"/>')
-    a.append(f'<rect x="0" y="20" width="3" height="160" fill="url(#ca)"/>')
-    a.append(f'<text x="48" y="40" font-family="{MONO}" font-size="9" letter-spacing="3" '
+    a.append(f'<rect x="0" y="32" width="3" height="{h-64}" fill="url(#ca)"/>')
+    a.append(f'<text x="32" y="44" font-family="{MONO}" font-size="10" letter-spacing="3" '
              f'fill="{p["muted"]}">TELEMETRY // PUBLIC DATA</text>')
-    a.append(f'<text x="1072" y="40" font-family="{MONO}" font-size="8.5" letter-spacing="1.4" '
-             f'fill="{p["dim"]}" text-anchor="end">GITHUB.COM/{esc(user.get("login", ""))}</text>')
-    a.append(f'<path d="M48 54H1072" stroke="{p["line"]}" stroke-opacity=".16"/>')
-    a.append(tickmarks(48, 1072, 54, 28, p["grid"], ".16", 4))
+    a.append(f'<text x="980" y="44" font-family="{MONO}" font-size="10" letter-spacing="1.6" '
+             f'fill="{p["dim"]}" text-anchor="end">SOURCE · GITHUB API</text>')
+    a.append(f'<path d="M32 64H980" stroke="{p["line"]}" stroke-opacity=".16"/>')
+    a.append(f'<path d="M352 80V168" stroke="{p["border"]}"/>')
+    a.append(f'<path d="M684 80V168" stroke="{p["border"]}"/>')
 
-    # 核心指标
-    a.append(f'<text x="48" y="80" font-family="{MONO}" font-size="8.5" letter-spacing="2.4" '
-             f'fill="{p["dim"]}">CORE / 01</text>')
     cores = [("REPOS", len(public)), ("STARS", stars), ("FOLLOWERS", int(user.get("followers") or 0))]
     for i, (label, value) in enumerate(cores):
-        x = 48 + i * 116
-        a.append(f'<text x="{x}" y="126" font-family="{MONO}" font-size="34" font-weight="700" '
+        x = 32 + i * 120
+        a.append(f'<text x="{x}" y="128" font-family="{MONO}" font-size="40" font-weight="700" '
                  f'letter-spacing="1" fill="{p["ink"]}">{value:03d}</text>')
-        a.append(f'<text x="{x}" y="146" font-family="{MONO}" font-size="8" letter-spacing="1.6" '
+        a.append(f'<text x="{x}" y="152" font-family="{MONO}" font-size="10" letter-spacing="1.8" '
                  f'fill="{p["muted"]}">{label}</text>')
-    a.append(f'<path d="M412 70V160" stroke="{p["border"]}"/>')
 
-    # 语言分布（按仓库数量，真实统计）
-    a.append(f'<text x="444" y="80" font-family="{MONO}" font-size="8.5" letter-spacing="2.4" '
-             f'fill="{p["dim"]}">LANGUAGES / 02</text>')
+    a.append(f'<text x="384" y="88" font-family="{MONO}" font-size="10" letter-spacing="2.2" '
+             f'fill="{p["dim"]}">LANGUAGES</text>')
     if top:
-        for i, (lang, count) in enumerate(top):
-            y = 104 + i * 20
-            a.append(f'<text x="444" y="{y}" font-family="{MONO}" font-size="9" letter-spacing="1" '
-                     f'fill="{p["ink"]}" fill-opacity=".8">{esc(lang.upper())}</text>')
-            bw = 150 * count / max_count
-            a.append(f'<rect x="556" y="{y-7}" width="150" height="4" fill="{p["line"]}" fill-opacity=".12"/>')
-            a.append(f'<rect x="556" y="{y-7}" width="{bw:.1f}" height="4" fill="{p["line"]}" fill-opacity=".65"/>')
-            a.append(f'<text x="760" y="{y}" font-family="{MONO}" font-size="8" letter-spacing="1" '
-                     f'fill="{p["dim"]}" text-anchor="end">{count} REPO</text>')
+        for i, (lang, count) in enumerate(top[:4]):
+            cx = 384 + (i % 2) * 136
+            cy = 112 + (i // 2) * 32
+            a.append(f'<text x="{cx}" y="{cy}" font-family="{MONO}" font-size="10.5" letter-spacing="1" '
+                     f'fill="{p["ink"]}">{esc(lang.upper())}</text>')
+            a.append(f'<text x="{cx + 116}" y="{cy}" font-family="{MONO}" font-size="10" letter-spacing=".4" '
+                     f'fill="{p["dim"]}" text-anchor="end">{count} REPO{"" if count == 1 else "S"}</text>')
     else:
-        a.append(f'<text x="444" y="104" font-family="{MONO}" font-size="9" fill="{p["dim"]}">NO LANGUAGE DATA</text>')
-    a.append(f'<path d="M790 70V160" stroke="{p["border"]}"/>')
+        a.append(f'<text x="384" y="112" font-family="{MONO}" font-size="10.5" fill="{p["dim"]}">NO DATA</text>')
 
-    # 账号信号
-    a.append(f'<text x="822" y="80" font-family="{MONO}" font-size="8.5" letter-spacing="2.4" '
-             f'fill="{p["dim"]}">SIGNAL / 03</text>')
     top_lang = esc(top[0][0].upper()) if top else "N/A"
     rows = [("SINCE", since), ("FOLLOWING", f"{int(user.get('following') or 0):02d}"),
-            ("TOP LANG", top_lang), ("SOURCE", "GITHUB API")]
+            ("TOP LANG", top_lang)]
+    a.append(f'<text x="716" y="88" font-family="{MONO}" font-size="10" letter-spacing="2.2" '
+             f'fill="{p["dim"]}">SIGNAL</text>')
     for i, (label, value) in enumerate(rows):
-        y = 106 + i * 18
-        a.append(f'<text x="822" y="{y}" font-family="{MONO}" font-size="8" letter-spacing="1.6" '
+        y = 112 + i * 24
+        a.append(f'<text x="716" y="{y}" font-family="{MONO}" font-size="10" letter-spacing="1.6" '
                  f'fill="{p["dim"]}">{label}</text>')
-        a.append(f'<text x="1056" y="{y}" font-family="{MONO}" font-size="8.5" letter-spacing="1" '
-                 f'fill="{p["ink"]}" fill-opacity=".78" text-anchor="end">{value}</text>')
-    a.append(f'<circle cx="1044" cy="176" r="2.4" fill="{p["line"]}" class="led"/>')
-    a.append(f'<text x="48" y="182" font-family="{MONO}" font-size="7.5" letter-spacing="1.4" '
-             f'fill="{p["dim"]}">PUBLIC REPOS / EXCL. PROFILE REPO</text>')
-    a.append(f'<text x="1072" y="182" font-family="{MONO}" font-size="7.5" letter-spacing="1.4" '
-             f'fill="{p["dim"]}" text-anchor="end">SYNC / DAILY</text>')
+        a.append(f'<path d="M800 {y}H916" stroke="{p["border"]}" stroke-dasharray="1.5 5"/>')
+        a.append(f'<text x="980" y="{y}" font-family="{MONO}" font-size="10.5" letter-spacing=".8" '
+                 f'fill="{p["ink"]}" text-anchor="end">{value}</text>')
     a.append('</g>')
-    a.append(f'<path d="{frame(w, h, 14)}" stroke="{p["border"]}"/>')
-    a.append(f'<path d="{frame(w, h, 14, 7)}" stroke="{p["line"]}" stroke-opacity=".16"/>')
-    a.append(f'<path d="M18 48V18H48" stroke="{p["line"]}" stroke-opacity=".5" stroke-width="2"/>')
-    a.append(f'<path d="M1102 152v30h-30" stroke="{p["line"]}" stroke-opacity=".5" stroke-width="2"/>')
+    a.append(f'<path d="{frame(w, h)}" stroke="{p["border"]}"/>')
+    a.append(f'<path d="M16 40V16H40" stroke="{p["line"]}" stroke-opacity=".55" stroke-width="2"/>')
+    a.append(f'<path d="{w-16} {h-40}V{h-16}H{w-40}" stroke="{p["line"]}" stroke-opacity=".55" stroke-width="2"/>')
     return svg(w, h, "".join(a), f"{user.get('login','')} — GitHub telemetry",
                "公开仓库数量、Star、关注者与语言分布的自动统计")
 
@@ -397,7 +355,7 @@ def main() -> None:
             '    <picture>\n'
             f'      <source media="(prefers-color-scheme: dark)" srcset="{d_url}">\n'
             f'      <source media="(prefers-color-scheme: light)" srcset="{l_url}">\n'
-            f'      <img src="{l_url}" alt="{esc(alt)}" width="1120">\n'
+            f'      <img src="{l_url}" alt="{esc(alt)}" width="1012">\n'
             '    </picture>\n'
             '  </a>\n'
             '</p>'
@@ -419,9 +377,8 @@ def main() -> None:
     rule_bits.append(f"最近更新前 {cfg.get('max_projects', 3)} 个")
     blocks.append('<p align="center">\n  <sub>AUTO-SYNC · '
                   + " / ".join(rule_bits)
-                  + f' · 规则见 <a href="https://github.com/{username}/{username}/blob/main/scripts/profile_config.json">profile_config.json</a></sub>\n</p>')
-    blocks.append('<p align="center">\n'
-                  f'  <sub><a href="https://github.com/{username}?tab=repositories">ALL REPOSITORIES →</a></sub>\n</p>')
+                  + f' · <a href="https://github.com/{username}/{username}/blob/main/scripts/profile_config.json">规则</a>'
+                  + f' · <a href="https://github.com/{username}?tab=repositories">全部仓库 →</a></sub>\n</p>')
 
     # 统计面板
     stats_files = {}
@@ -436,7 +393,7 @@ def main() -> None:
         '  <picture>\n'
         f'    <source media="(prefers-color-scheme: dark)" srcset="{stats_files["dark"]}">\n'
         f'    <source media="(prefers-color-scheme: light)" srcset="{stats_files["light"]}">\n'
-        f'    <img src="{stats_files["light"]}" alt="{esc(username)} 的公开仓库统计" width="1120">\n'
+        f'    <img src="{stats_files["light"]}" alt="{esc(username)} 的公开仓库统计" width="1012">\n'
         '  </picture>\n'
         '</p>'
     )

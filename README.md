@@ -1,8 +1,8 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=2">
-    <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg?v=2">
-    <img src="assets/hero-light.svg?v=2" alt="oliverbuddy — 独立开发者，移动工具 / 本地加密 / 行情组件" width="1120">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=3">
+    <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg?v=3">
+    <img src="assets/hero-light.svg?v=3" alt="oliverbuddy — 独立开发者，移动工具 / 本地加密 / 行情组件" width="1012">
   </picture>
 </p>
 
@@ -12,25 +12,16 @@
 偏好本地优先、隐私友好、可长期维护的小型工程。
 
 - **FOCUS** — 移动端工具 · 本地加密 · 行情组件
-- **STACK** — Flutter · Dart · C++ · Python · JavaScript · Git
 - **EXPLORING** — Docker · Kubernetes
 - **SIGNAL** — [qiwei0727@163.com](mailto:qiwei0727@163.com)
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg?v=2">
-    <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg?v=2">
-    <img src="assets/divider-light.svg?v=2" alt="" width="1120">
-  </picture>
-</p>
 
 ## 02 // TECH MATRIX
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg?v=2">
-    <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=2">
-    <img src="assets/stack-light.svg?v=2" alt="语言：Dart、Python、JavaScript、C++；框架：Flutter；工具：Git、Docker、Kubernetes" width="1120">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg?v=3">
+    <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg?v=3">
+    <img src="assets/stack-light.svg?v=3" alt="语言：Dart、Python、JavaScript、C++；框架：Flutter；工具：Git、Docker、Kubernetes" width="1012">
   </picture>
 </p>
 
@@ -40,38 +31,26 @@
 <p align="center">
   <a href="https://github.com/oliverbuddy/private_notes">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/project-private-notes-dark.svg?v=a6f140c6">
-      <source media="(prefers-color-scheme: light)" srcset="assets/project-private-notes-light.svg?v=39d642b9">
-      <img src="assets/project-private-notes-light.svg?v=39d642b9" alt="private_notes — 小记 · 手机端 Markdown 笔记（Flutter）" width="1120">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/project-private-notes-dark.svg?v=afa5083d">
+      <source media="(prefers-color-scheme: light)" srcset="assets/project-private-notes-light.svg?v=7be0469a">
+      <img src="assets/project-private-notes-light.svg?v=7be0469a" alt="private_notes — 小记 · 手机端 Markdown 笔记（Flutter）" width="1012">
     </picture>
   </a>
 </p>
 
 <p align="center">
-  <sub>AUTO-SYNC · 非 fork / 非归档 / 有描述 / 非空仓库 / 最近更新前 3 个 · 规则见 <a href="https://github.com/oliverbuddy/oliverbuddy/blob/main/scripts/profile_config.json">profile_config.json</a></sub>
-</p>
-
-<p align="center">
-  <sub><a href="https://github.com/oliverbuddy?tab=repositories">ALL REPOSITORIES →</a></sub>
+  <sub>AUTO-SYNC · 非 fork / 非归档 / 有描述 / 非空仓库 / 最近更新前 3 个 · <a href="https://github.com/oliverbuddy/oliverbuddy/blob/main/scripts/profile_config.json">规则</a> · <a href="https://github.com/oliverbuddy?tab=repositories">全部仓库 →</a></sub>
 </p>
 <!-- PROJECTS:END -->
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg?v=2">
-    <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg?v=2">
-    <img src="assets/divider-light.svg?v=2" alt="" width="1120">
-  </picture>
-</p>
 
 ## 04 // TELEMETRY
 
 <!-- STATS:START -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg?v=681b139a">
-    <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=d5c45da5">
-    <img src="assets/stats-light.svg?v=d5c45da5" alt="oliverbuddy 的公开仓库统计" width="1120">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg?v=4b8000f0">
+    <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg?v=9cc0bf23">
+    <img src="assets/stats-light.svg?v=9cc0bf23" alt="oliverbuddy 的公开仓库统计" width="1012">
   </picture>
 </p>
 <!-- STATS:END -->
@@ -99,13 +78,5 @@
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg?v=2">
-    <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg?v=2">
-    <img src="assets/divider-light.svg?v=2" alt="" width="1120">
-  </picture>
-</p>
-
-<p align="center">
-  <sub>OLIVERBUDDY · EST. 2015 · STATIC SVG / HUD v2.0</sub>
+  <sub>OLIVERBUDDY · STATIC SVG / HUD v3.0</sub>
 </p>
