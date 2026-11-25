@@ -10,13 +10,11 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/rule-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/rule-light.svg">
-    <img src="assets/rule-light.svg" alt="" width="1012">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
+    <img src="assets/hero-light.svg" alt="" width="1012">
   </picture>
 </p>
-
-> `INDEX` · `01` 能做什么 · `02` 代表项目 · `03` 技术栈 · `04` 数据 · `05` 联系方式
 
 ## `01` / 能做什么
 
