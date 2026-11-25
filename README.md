@@ -19,7 +19,7 @@
 ## ARCHIVE / 造物
 
 <!-- PROJECTS:START -->
-- `01` **[private_notes](https://github.com/oliverbuddy/private_notes)** — 小记 · 手机端 Markdown 笔记（Flutter） · `Dart` · 2026.11 · ★ 1
+- `01` **[private_notes](https://github.com/oliverbuddy/private_notes)** — 小记 · 手机端 Markdown 笔记（Flutter） · `Dart` · 2026.11
 
 <sub>AUTO-SYNC · 非 fork / 非归档 / 有描述 · 每日刷新 · <a href="https://github.com/oliverbuddy/oliverbuddy/blob/main/scripts/profile_config.json">筛选规则</a> · <a href="https://github.com/oliverbuddy?tab=repositories">全部仓库 →</a></sub>
 <!-- PROJECTS:END -->
@@ -28,8 +28,8 @@
 
 <!-- STATS:START -->
 ```console
-REPOS     1         STARS     1
-FOLLOWERS 7         SINCE     2015
+REPOS     1         STARS     0
+FOLLOWERS 6         SINCE     2015
 MAIN      Dart
 ```
 
